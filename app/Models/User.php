@@ -86,3 +86,5 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 }
+
+// Update: Add isAdmin and isCompany role validation checks in User model
