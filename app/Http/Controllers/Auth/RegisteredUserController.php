@@ -49,3 +49,5 @@ class RegisteredUserController extends Controller
         return redirect(RouteServiceProvider::HOME);
     }
 }
+
+// Update: Add role assignment validation during user registration
