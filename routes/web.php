@@ -37,3 +37,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::delete('/{ids}', [NotificationController::class, 'destroy'])->name('destroy');
     });
 });
+
+// Update: Group admin routes under admin prefix with auth and role middleware
