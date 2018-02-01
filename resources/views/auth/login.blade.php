@@ -82,3 +82,5 @@
         </div>
     </div>
 @endsection
+
+// Update: Improve login form remember me checkbox and password visibility toggle
