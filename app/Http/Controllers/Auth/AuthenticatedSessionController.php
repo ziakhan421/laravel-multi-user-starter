@@ -54,3 +54,5 @@ class AuthenticatedSessionController extends Controller
 }
 
 // Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
+
+// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
