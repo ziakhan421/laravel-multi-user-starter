@@ -46,3 +46,5 @@
 @endsection
 
 // Update: Add status banner for password reset email sent confirmation
+
+// Update: Add status banner for password reset email sent confirmation
