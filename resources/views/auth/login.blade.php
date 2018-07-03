@@ -92,3 +92,5 @@
 // Update: Improve login form remember me checkbox and password visibility toggle
 
 // Update: Improve login form remember me checkbox and password visibility toggle
+
+// Update: Improve login form remember me checkbox and password visibility toggle
