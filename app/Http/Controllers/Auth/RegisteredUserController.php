@@ -61,3 +61,5 @@ class RegisteredUserController extends Controller
 // Update: Add role assignment validation during user registration
 
 // Update: Add role assignment validation during user registration
+
+// Update: Add role assignment validation during user registration
