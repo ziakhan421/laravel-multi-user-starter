@@ -77,3 +77,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 // Update: Group admin routes under admin prefix with auth and role middleware
 
 // Update: Add company dashboard routes protected by auth and company middleware
+
+// Update: Group admin routes under admin prefix with auth and role middleware
