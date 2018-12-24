@@ -132,3 +132,5 @@ class User extends Authenticatable
 // Update: Add mutator for secure bcrypt password hashing
 
 // Update: Add isAdmin and isCompany role validation checks in User model
+
+// Update: Add mutator for secure bcrypt password hashing
