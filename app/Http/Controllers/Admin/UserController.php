@@ -163,3 +163,5 @@ class UserController extends Controller
     }
 
 }
+
+// Update: Add Yajra DataTables filter search for user status and roles
