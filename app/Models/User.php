@@ -134,3 +134,5 @@ class User extends Authenticatable
 // Update: Add isAdmin and isCompany role validation checks in User model
 
 // Update: Add mutator for secure bcrypt password hashing
+
+// Update: Add scopeActive and scopeVerified query scopes to User model
