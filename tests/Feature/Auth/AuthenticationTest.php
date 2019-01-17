@@ -43,3 +43,5 @@ class AuthenticationTest extends TestCase
         $this->assertGuest();
     }
 }
+
+// Update: Add test cases for login throttling after excessive attempts
