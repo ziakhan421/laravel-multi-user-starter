@@ -46,3 +46,5 @@
         </div>
     </form>
 </section>
+
+// Update: Add password strength indicator and confirmation matching
