@@ -87,3 +87,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 // Update: Add company dashboard routes protected by auth and company middleware
 
 // Update: Bind UserController resourceful routes inside admin middleware group
+
+// Update: Bind UserController resourceful routes inside admin middleware group
