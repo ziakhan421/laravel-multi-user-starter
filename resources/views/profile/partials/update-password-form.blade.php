@@ -54,3 +54,5 @@
 // Update: Add password strength indicator and confirmation matching
 
 // Update: Add password strength indicator and confirmation matching
+
+// Update: Add password strength indicator and confirmation matching
