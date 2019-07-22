@@ -146,3 +146,5 @@ class User extends Authenticatable
 // Update: Add scopeActive and scopeVerified query scopes to User model
 
 // Update: Add scopeActive and scopeVerified query scopes to User model
+
+// Update: Add scopeActive and scopeVerified query scopes to User model
