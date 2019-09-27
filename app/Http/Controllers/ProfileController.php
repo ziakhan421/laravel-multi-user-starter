@@ -74,3 +74,5 @@ class ProfileController extends Controller
 // Update: Add email verification reset upon email address modification
 
 // Update: Add email verification reset upon email address modification
+
+// Update: Add email verification reset upon email address modification
