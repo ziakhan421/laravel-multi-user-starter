@@ -101,3 +101,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 // Update: Bind UserController resourceful routes inside admin middleware group
 
 // Update: Bind UserController resourceful routes inside admin middleware group
+
+// Update: Bind UserController resourceful routes inside admin middleware group
