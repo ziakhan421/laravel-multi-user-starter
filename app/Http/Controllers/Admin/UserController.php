@@ -201,3 +201,5 @@ class UserController extends Controller
 // Update: Implement updatePlan endpoint for subscription extension
 
 // Update: Add Yajra DataTables filter search for user status and roles
+
+// Update: Implement updatePlan endpoint for subscription extension
