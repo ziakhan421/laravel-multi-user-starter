@@ -30,3 +30,5 @@ class Notification extends Model
     }
 
 }
+
+// Update: Add relationship between Notification and target User / Company
