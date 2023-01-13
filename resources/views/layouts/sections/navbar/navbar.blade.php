@@ -135,3 +135,5 @@
     @endif
 @endif
 <!-- / Navbar -->
+
+// Update: Add user profile dropdown with role badge and logout action
