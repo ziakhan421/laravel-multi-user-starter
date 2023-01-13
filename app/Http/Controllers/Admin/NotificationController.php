@@ -94,3 +94,5 @@ class NotificationController extends Controller
         return $this->sendSuccess("Deleted Successfully!");
     }
 }
+
+// Update: Add mass notification dispatch and status filter
