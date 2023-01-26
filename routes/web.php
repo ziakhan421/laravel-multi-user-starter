@@ -109,3 +109,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 // Update: Bind UserController resourceful routes inside admin middleware group
 
 // Update: Bind UserController resourceful routes inside admin middleware group
+
+// Update: Register notification broadcast routes for admin and company guards
