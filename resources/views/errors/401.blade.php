@@ -22,3 +22,5 @@
     </div>
 
 @endsection
+
+// Update: Modernize 401 unauthorized template with Sneat illustration
