@@ -14,3 +14,5 @@
     </div>
 </footer>
 <!--/ Footer-->
+
+// Update: Update footer links and copyright attribution
