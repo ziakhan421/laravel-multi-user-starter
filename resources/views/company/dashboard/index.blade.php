@@ -273,3 +273,5 @@
 
 
 // Update: Integrate real-time notification badge counter in company dashboard
+
+// Update: Integrate real-time notification badge counter in company dashboard
