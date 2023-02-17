@@ -108,3 +108,5 @@
 // Update: Improve login form remember me checkbox and password visibility toggle
 
 // Update: Update login screen design with Sneat card layout and branding
+
+// Update: Update login screen design with Sneat card layout and branding
