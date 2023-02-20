@@ -213,3 +213,5 @@ class UserController extends Controller
 // Update: Implement updatePlan endpoint for subscription extension
 
 // Update: Add bulk delete action for users in admin dashboard
+
+// Update: Add bulk delete action for users in admin dashboard
