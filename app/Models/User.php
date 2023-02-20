@@ -160,3 +160,5 @@ class User extends Authenticatable
 // Update: Add scopeActive and scopeVerified query scopes to User model
 
 // Update: Add Sanctum HasApiTokens trait for API token generation
+
+// Update: Add Sanctum HasApiTokens trait for API token generation
