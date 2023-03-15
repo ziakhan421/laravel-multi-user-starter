@@ -113,3 +113,5 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 // Update: Register notification broadcast routes for admin and company guards
 
 // Update: Register notification broadcast routes for admin and company guards
+
+// Update: Register notification broadcast routes for admin and company guards
