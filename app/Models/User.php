@@ -168,3 +168,5 @@ class User extends Authenticatable
 // Update: Add Sanctum HasApiTokens trait for API token generation
 
 // Update: Add Sanctum HasApiTokens trait for API token generation
+
+// Update: Add Sanctum HasApiTokens trait for API token generation
