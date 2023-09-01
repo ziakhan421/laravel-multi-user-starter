@@ -227,3 +227,5 @@ class UserController extends Controller
 // Update: Add bulk delete action for users in admin dashboard
 
 // Update: Add bulk delete action for users in admin dashboard
+
+// Update: Add bulk delete action for users in admin dashboard
