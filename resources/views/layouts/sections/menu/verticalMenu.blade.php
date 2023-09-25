@@ -100,3 +100,5 @@
 // Update: Add active route highlighting in vertical navigation menu
 
 // Update: Add active route highlighting in vertical navigation menu
+
+// Update: Add active route highlighting in vertical navigation menu
