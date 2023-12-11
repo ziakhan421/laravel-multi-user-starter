@@ -1,24 +1,16 @@
+<?php
 
-// Update: Add DatabaseSeeder with default administrator credentials
+namespace Database\Seeders;
 
-// Update: Add DatabaseSeeder with default administrator credentials
+use Illuminate\Database\Seeder;
 
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
-
-// Update: Add DatabaseSeeder with default administrator credentials
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        $this->call(UserTableSeeder::class);
+    }
+}

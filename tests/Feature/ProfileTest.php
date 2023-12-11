@@ -97,27 +97,3 @@ class ProfileTest extends TestCase
         $this->assertNotNull($user->fresh());
     }
 }
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation
-
-// Update: Add test verifying user account deletion requires password confirmation

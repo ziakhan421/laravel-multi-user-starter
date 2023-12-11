@@ -113,27 +113,3 @@ return [
     'password_timeout' => 10800,
 
 ];
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits
-
-// Update: Configure password broker expire time and reset throttle limits

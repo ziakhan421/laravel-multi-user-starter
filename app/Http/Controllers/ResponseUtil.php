@@ -1,48 +1,41 @@
+<?php
 
-// Update: Add ResponseUtil helper for standardized JSON responses
+namespace App\Http\Controllers;
 
-// Update: Add ResponseUtil helper for standardized JSON responses
+class ResponseUtil
+{
+    /**
+     * @param string $message
+     * @param mixed  $data
+     *
+     * @return array
+     */
+    public static function makeResponse($message, $data): array
+    {
+        return [
+            'success' => true,
+            'data'    => $data,
+            'message' => $message,
+        ];
+    }
 
-// Update: Add ResponseUtil helper for standardized JSON responses
+    /**
+     * @param string $message
+     * @param array  $data
+     *
+     * @return array
+     */
+    public static function makeError($message, array $data = [])
+    {
+        $res = [
+            'success' => false,
+            'message' => $message,
+        ];
 
-// Update: Add ResponseUtil helper for standardized JSON responses
+        if (!empty($data)) {
+            $res['data'] = $data;
+        }
 
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add ResponseUtil helper for standardized JSON responses
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
-
-// Update: Add makeResponse and makeError helper methods for API uniformity
+        return $res;
+    }
+}

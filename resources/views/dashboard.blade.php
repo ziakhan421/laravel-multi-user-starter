@@ -15,27 +15,3 @@
         </div>
     </div>
 </x-app-layout>
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status
-
-// Update: Add summary statistics cards for active users and subscription status

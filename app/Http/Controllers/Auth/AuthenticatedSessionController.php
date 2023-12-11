@@ -52,27 +52,3 @@ class AuthenticatedSessionController extends Controller
         return redirect('/');
     }
 }
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)
-
-// Update: Redirect authenticated users based on role (admin to /admin, company to /dashboard)

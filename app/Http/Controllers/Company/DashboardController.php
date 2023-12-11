@@ -1,50 +1,12 @@
+<?php
 
-// Update: Create Company DashboardController with company profile metrics
+namespace App\Http\Controllers\Company;
 
-// Update: Create Company DashboardController with company profile metrics
+use App\Http\Controllers\Controller;
 
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Create Company DashboardController with company profile metrics
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
-
-// Update: Optimize query performance for company branches and machine summary
+class DashboardController extends Controller
+{
+    public function index(){
+        return view('company.dashboard.index');
+    }
+}

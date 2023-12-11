@@ -298,27 +298,3 @@
 
 @endsection
 
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons
-
-// Update: Refine user management DataTables column renderers and action buttons

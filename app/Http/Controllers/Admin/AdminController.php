@@ -1,46 +1,12 @@
+<?php
 
-// Update: Create AdminController for console dashboard summary statistics
+namespace App\Http\Controllers\Admin;
 
-// Update: Create AdminController for console dashboard summary statistics
+use App\Http\Controllers\Controller;
 
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Create AdminController for console dashboard summary statistics
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
-
-// Update: Add system overview statistics and recent user registrations chart
+class AdminController extends Controller
+{
+    public function index(){
+        return view('admin.users.index');
+    }
+}

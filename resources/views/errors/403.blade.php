@@ -21,25 +21,3 @@
     </div>
 
 @endsection
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
-
-// Update: Enhance 403 forbidden access page with return to dashboard link
