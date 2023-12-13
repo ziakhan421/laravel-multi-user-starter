@@ -110,7 +110,7 @@
   --bs-border-radius-pill: 50rem;
   --bs-box-shadow: 0 0.25rem 1rem rgba(161, 172, 184, 0.45);
   --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(161, 172, 184, 0.4);
-  --bs-box-shadow-lg: 0 0.625rem 1.25rem rgba(161, 172, 184, 0.5);
+  --bs-box-shadow-lg: 0 0.625rem 1.25rem rgba(161, 172, 184, 0.6);
   --bs-box-shadow-inset: inset 0 1px 2px rgba(67, 89, 113, 0.075);
   --bs-focus-ring-width: 0.15rem;
   --bs-focus-ring-opacity: 0.75;
@@ -10196,7 +10196,7 @@ button.list-group-item-gray.active {
 
 .bg-secondary.toast, .bg-secondary.bs-toast {
   color: #fff;
-  background-color: rgba(133, 146, 163, 0.85) !important;
+  background-color: rgba(133, 146, 163, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(133, 146, 163, 0.4);
 }
 .bg-secondary.toast .toast-header, .bg-secondary.bs-toast .toast-header {
@@ -10210,7 +10210,7 @@ button.list-group-item-gray.active {
 
 .bg-success.toast, .bg-success.bs-toast {
   color: #fff;
-  background-color: rgba(113, 221, 55, 0.85) !important;
+  background-color: rgba(113, 221, 55, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(113, 221, 55, 0.4);
 }
 .bg-success.toast .toast-header, .bg-success.bs-toast .toast-header {
@@ -10224,7 +10224,7 @@ button.list-group-item-gray.active {
 
 .bg-info.toast, .bg-info.bs-toast {
   color: #fff;
-  background-color: rgba(3, 195, 236, 0.85) !important;
+  background-color: rgba(3, 195, 236, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(3, 195, 236, 0.4);
 }
 .bg-info.toast .toast-header, .bg-info.bs-toast .toast-header {
@@ -10238,7 +10238,7 @@ button.list-group-item-gray.active {
 
 .bg-warning.toast, .bg-warning.bs-toast {
   color: #fff;
-  background-color: rgba(255, 171, 0, 0.85) !important;
+  background-color: rgba(255, 171, 0, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(255, 171, 0, 0.4);
 }
 .bg-warning.toast .toast-header, .bg-warning.bs-toast .toast-header {
@@ -10252,7 +10252,7 @@ button.list-group-item-gray.active {
 
 .bg-danger.toast, .bg-danger.bs-toast {
   color: #fff;
-  background-color: rgba(255, 62, 29, 0.85) !important;
+  background-color: rgba(255, 62, 29, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(255, 62, 29, 0.4);
 }
 .bg-danger.toast .toast-header, .bg-danger.bs-toast .toast-header {
@@ -10266,7 +10266,7 @@ button.list-group-item-gray.active {
 
 .bg-light.toast, .bg-light.bs-toast {
   color: #fff;
-  background-color: rgba(252, 253, 253, 0.85) !important;
+  background-color: rgba(252, 253, 253, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(252, 253, 253, 0.4);
 }
 .bg-light.toast .toast-header, .bg-light.bs-toast .toast-header {
@@ -10280,7 +10280,7 @@ button.list-group-item-gray.active {
 
 .bg-dark.toast, .bg-dark.bs-toast {
   color: #fff;
-  background-color: rgba(35, 52, 70, 0.85) !important;
+  background-color: rgba(35, 52, 70, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(35, 52, 70, 0.4);
 }
 .bg-dark.toast .toast-header, .bg-dark.bs-toast .toast-header {
@@ -10294,7 +10294,7 @@ button.list-group-item-gray.active {
 
 .bg-gray.toast, .bg-gray.bs-toast {
   color: #fff;
-  background-color: rgba(67, 89, 113, 0.85) !important;
+  background-color: rgba(67, 89, 113, 0.95) !important;
   box-shadow: 0 0.25rem 1rem rgba(67, 89, 113, 0.4);
 }
 .bg-gray.toast .toast-header, .bg-gray.bs-toast .toast-header {
@@ -10312,7 +10312,7 @@ button.list-group-item-gray.active {
 }
 
 .toast.bs-toast {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 1095;
 }
 .toast.bs-toast .toast-header {
@@ -10327,7 +10327,7 @@ button.list-group-item-gray.active {
   background-size: 0.625em;
   transition: all 0.23s ease 0.1s;
   background-color: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(161, 172, 184, 0.4);
+  box-shadow: 0 0.625rem 1.25rem rgba(161, 172, 184, 0.6) !important;
   right: 2px;
 }
 .toast.bs-toast .toast-header .btn-close:hover, .toast.bs-toast .toast-header .btn-close:focus, .toast.bs-toast .toast-header .btn-close:active {
@@ -10344,7 +10344,7 @@ button.list-group-item-gray.active {
 
 .toast-ex {
   position: fixed;
-  top: 4.1rem;
+  top: 5rem;
   right: 2.5rem;
 }
 
@@ -10404,6 +10404,14 @@ button.list-group-item-gray.active {
 .carousel.carousel-dark .carousel-item.carousel-item-start h6,
 .carousel.carousel-dark .carousel-item.carousel-item-start .h6 {
   color: #435971;
+}
+
+.spinner-border, .btn .spinner-grow {
+  height: 1rem;
+  position: relative;
+  top: -0.0625rem;
+  width: 1rem;
+  border-width: 0.1em;
 }
 
 .spinner-border-lg {
@@ -10574,7 +10582,7 @@ button.list-group-item-gray.active {
 }
 
 .shadow-lg {
-  box-shadow: 0 0.625rem 1.25rem rgba(161, 172, 184, 0.5) !important;
+  box-shadow: 0 0.625rem 1.25rem rgba(161, 172, 184, 0.6) !important;
 }
 
 .shadow-none {

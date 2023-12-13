@@ -17,6 +17,22 @@ class User extends Authenticatable
     const INSPECTOR_ROLE = 'inspector';
 
     /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        'name' => 'required|max:255',
+        'email' => 'required|email|max:255|unique:users,email',
+        'password' => 'required|min:6',
+        'company_name' => 'max:255',
+        'username' => 'max:255|unique:users,username',
+        'company_id' => 'exists:users,id',
+        'branch_Id' => 'exists:branches,id',
+        'picture' => 'mimes:jpeg,jpg,png|max:2048',
+    ];
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -35,8 +51,8 @@ class User extends Authenticatable
         'telephone',
         'email',
         'password',
+        'created_by'
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *

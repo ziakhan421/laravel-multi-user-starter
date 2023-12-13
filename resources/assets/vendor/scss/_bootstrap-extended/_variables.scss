@@ -176,7 +176,7 @@ $border-tint-amount: 60% !default; // (C)
 // scss-docs-start box-shadow-variables
 $box-shadow: 0 0.25rem 1rem rgba(rgba-to-hex($gray-500, $rgba-to-hex-bg), 0.45) !default;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba(rgba-to-hex($gray-500, $rgba-to-hex-bg), 0.4) !default;
-$box-shadow-lg: 0 0.625rem 1.25rem rgba(rgba-to-hex($gray-500, $rgba-to-hex-bg), 0.5) !default;
+$box-shadow-lg: 0 0.625rem 1.25rem rgba(rgba-to-hex($gray-500, $rgba-to-hex-bg), 0.6) !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color: $white !default;
@@ -755,7 +755,7 @@ $toast-padding-x: 1.25rem !default;
 $toast-padding-y: $toast-padding-x !default;
 $toast-font-size: $font-size-base !default;
 $toast-background-color: $white !default;
-$toast-bg-factor: 0.85 !default; // (C)
+$toast-bg-factor: 0.95 !default; // (C)
 $toast-border-width: 0 !default;
 $toast-border-color: $gray-100 !default;
 $toast-border-radius: $border-radius-lg !default;
@@ -893,6 +893,10 @@ $carousel-control-next-icon-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www
 
 // Spinners
 // *******************************************************************************
+
+$spinner-height-btn: 1rem !default; // (C)
+$spinner-width-btn: $spinner-height-btn !default; // (C)
+$spinner-border-width-btn: 0.1em !default; // (C)
 
 $spinner-width-lg: 3rem !default; // (C)
 $spinner-height-lg: $spinner-width-lg !default; // (C)

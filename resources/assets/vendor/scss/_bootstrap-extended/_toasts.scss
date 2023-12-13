@@ -27,7 +27,7 @@
       background-size: $toast-btn-close-size;
       transition: all 0.23s ease 0.1s;
       background-color: $toast-background-color;
-      box-shadow: $box-shadow-sm;
+      box-shadow: $box-shadow-lg !important;
       @include ltr-style {
         right: 2px;
       }
@@ -52,7 +52,7 @@
 // Bootstrap Toasts Example
 .toast-ex {
   position: fixed;
-  top: 4.1rem;
+  top: 5rem;
   right: 2.5rem;
 }
 // Placement Toast example

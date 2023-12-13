@@ -27,6 +27,9 @@
 </head>
 
 <body>
+
+<div id="global-toast-container" class="p-3"></div>
+
 <!-- Layout Content -->
 @yield('layoutContent')
 <!--/ Layout Content -->
@@ -34,6 +37,43 @@
 <!-- Include Scripts -->
 @include('layouts/sections/scripts')
 
+<script>
+    function showToast(message, type = 'success') {
+        const toastContainer = document.getElementById('global-toast-container');
+        let icon = 'bx-check';
+        let title = 'Success';
+        let bgClass = 'bg-success';
+        if (type !== 'success') {
+            icon = 'bx-error';
+            title = 'Error';
+            bgClass = 'bg-danger';
+        }
+        // Create a new toast element
+        const toast = document.createElement('div');
+        toast.className = `bs-toast ${bgClass} toast toast-ex animate__animated my-2 fade`;
+        toast.setAttribute('role', 'alert');
+        toast.setAttribute('aria-live', 'assertive');
+        toast.setAttribute('aria-atomic', 'true');
+        toast.setAttribute('data-bs-delay', '2000');
+
+        // Add toast content
+        toast.innerHTML = `
+            <div class="toast-header">
+                <i class="bx ${icon} me-2"></i>
+                <div class="me-auto fw-medium">${title}</div>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                ${message}
+            </div>
+        `;
+
+        // Append the toast to the container
+        toastContainer.appendChild(toast);
+        const bsToast = new bootstrap.Toast(toast);
+        bsToast.show();
+    }
+</script>
 </body>
 
 </html>

@@ -1,6 +1,14 @@
 // Spinners
 //
 
+.spinner-border, .btn .spinner-grow {
+    height: $spinner-height-btn;
+    position: relative;
+    top: -0.0625rem;
+    width: $spinner-height-btn;
+    border-width: $spinner-border-width-btn;
+}
+
 //Large size
 .spinner-border-lg {
   width: $spinner-width-lg;
