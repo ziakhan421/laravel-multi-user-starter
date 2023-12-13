@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.select {
+  border: none;
+}
+
+.select:focus-visible, select:focus, select:active {
+  border: none;
+}
+
 .authentication-wrapper {
   display: -ms-flexbox;
   display: flex;

@@ -1,0 +1,106 @@
+{
+    "menu": [
+        {
+            "menuHeader": "Management",
+            "visible": [
+                "admin","company","branch-manager"
+            ]
+        },
+        {
+            "url": "admin/console",
+            "name": "Company Register",
+            "icon": "menu-icon tf-icons bx bx-home-circle",
+            "slug": "console",
+            "visible": [
+                "admin"
+            ]
+        },
+        {
+            "url": "/",
+            "name": "Top",
+            "icon": "menu-icon tf-icons bx bx-home-circle",
+            "slug": "",
+            "visible": [
+                "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Analysis",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "analysis",
+            "url": "/analysis",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Defects",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "defects",
+            "url": "/defects",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Account management",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "account-management",
+            "url": "/account-management",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Branch management",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "branch-management",
+            "url": "/branch-management",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Machine management",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "machine-management",
+            "url": "/machine-management",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Inspection management",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "inspection-management",
+            "url": "/inspection-management",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "name": "Inspection history",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "inspection-history",
+            "url": "/inspection-history",
+            "visible": [
+               "company","branch-manager"
+            ]
+        },
+        {
+            "menuHeader": "User",
+            "visible": [
+               "admin","company","branch-manager"
+            ]
+        },
+        {
+            "name": "Logout",
+            "icon": "menu-icon tf-icons bx bx-collection",
+            "slug": "logout",
+            "url": "/logout",
+            "visible": [
+                "admin","company","branch-manager"
+            ]
+        }
+    ]
+}

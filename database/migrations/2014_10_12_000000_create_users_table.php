@@ -13,11 +13,10 @@ return new class extends Migration {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('company_name')->nullable();
             $table->string('username')->unique()->nullable();
-            $table->foreignId('company_id')->constrained('users')->cascadeOnDelete();
-            $table->foreignId('branch_Id')->constrained()->cascadeOnDelete();
-            $table->enum('role', ['Admin', 'Company', 'Branch Manager', 'Inspector'])->default('Inspector');
+            $table->foreignId('company_id')->nullable()->constrained('users')->cascadeOnDelete();
+            $table->string('company_name')->nullable();
+            $table->enum('role', ['admin', 'company', 'branch-manager', 'inspector'])->default('inspector');
             $table->integer('plan')->nullable();
             $table->text('note')->nullable();
             $table->string('picture')->nullable();

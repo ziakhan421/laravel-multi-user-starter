@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light-style layout-menu-fixed">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+      class="light-style layout-compact layout-navbar-fixed layout-menu-100vh layout-menu-fixed"
+      data-template="vertical-menu-theme-default-light" dir="ltr"
+      data-theme="theme-default"
+      data-assets-path="{{url('/')}}/assets/"
+      data-base-url="{{url('/')}}"
+      data-framework="laravel">
 
 <head>
     <meta charset="utf-8"/>

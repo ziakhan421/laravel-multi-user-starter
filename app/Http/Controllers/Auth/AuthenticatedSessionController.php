@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Helper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -29,17 +29,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        $url = '';
-
-        if($request->user() -> role === 'admin'){
-            $url = 'admin/dashboard';
-        } elseif($request -> user() -> role === 'agent'){
-            $url = 'agent/dashboard';
-        } elseif($request -> user() -> role === 'user'){
-            $url = '/dashboard';
+        $url = 'error';
+        if (Helper::isAdmin()) {
+            $url = '/admin';
+        } elseif (Helper::isCompany() || Helper::isManager()) {
+            $url = '/';
         }
-
-        return redirect()->intended($url);
+        return redirect($url);
     }
 
     /**
