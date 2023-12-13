@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
 
         $url = 'error';
         if (Helper::isAdmin()) {
-            $url = '/admin';
+            $url = '/admin/console';
         } elseif (Helper::isCompany() || Helper::isManager()) {
             $url = '/';
         }

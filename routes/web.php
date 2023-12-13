@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 require __DIR__ . '/auth.php';
 
 // Admin Route
-Route::group(['middleware' => ['auth','admin'], 'prefix' => 'admin', 'as' => 'admin.'], function() {
-    Route::get('/', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::get('/console', [AdminController::class, 'dashboard'])->name('dashboard');
 });
 
 // Company Route
@@ -16,7 +16,7 @@ Route::middleware(['auth', 'company'])->group(function () {
     Route::get('/', [AgentController::class, 'AgentDashboard'])->name('company.dashboard');
 });
 
-// Company Route
-Route::middleware(['auth'])->group(function () {
+// User Route
+Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('/', [AgentController::class, 'AgentDashboard'])->name('company.dashboard');
 });

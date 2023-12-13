@@ -2,11 +2,14 @@
 
     <!-- ! Hide app brand if navbar-full -->
     <div class="app-brand demo">
-        <a href="{{url('/')}}" class="app-brand-link w-100 justify-content-center align-items-center d-flex flex-column">
+        <a href="{{url('/')}}"
+           class="app-brand-link w-100 justify-content-center align-items-center d-flex flex-column">
             <div class="app-brand-logo demo">
                 @include('_partials.macros',["width"=>70,"withbg"=>'var(--bs-primary)'])
             </div>
-            <div class="app-brand-text demo menu-text fs-large ms-2">Company Name</div>
+            @if(auth()->check() && auth()->user()->role !=='admin')
+                <div class="app-brand-text demo menu-text fs-large ms-2">Company Name</div>
+            @endif
         </a>
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
@@ -14,9 +17,8 @@
     </div>
     <div class="menu-inner-shadow"></div>
 
-    <div class="divider text-end mb-0">
-        <div class="divider-text">&nbsp;</div>
-    </div>
+    <hr class="mt-4" style="border-color: #d9dee3 !important;">
+
     <ul class="menu-inner py-1">
         @foreach ($menuData[0]->menu as $menu)
             @php

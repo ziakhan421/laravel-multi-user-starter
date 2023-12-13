@@ -10,7 +10,7 @@
             "url": "admin/console",
             "name": "Company Register",
             "icon": "menu-icon tf-icons bx bx-home-circle",
-            "slug": "console",
+            "slug": "admin.dashboard",
             "visible": [
                 "admin"
             ]
