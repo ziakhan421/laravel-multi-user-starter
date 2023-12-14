@@ -38,6 +38,29 @@
 @include('layouts/sections/scripts')
 
 <script>
+    window.confirmAlert = function confirmAlert(title = null, text = null, icon = null, showCancelButton = true, confirmButtonText = null) {
+        return {
+            title: title ?? 'Are you sure?',
+            text: text ?? "You won't be able to revert this!",
+            icon: icon ?? 'warning',
+            showCancelButton: showCancelButton,
+            confirmButtonText: confirmButtonText ?? 'Yes, delete it!'
+        }
+    }
+
+    function showError(response){
+        let errorMessage;
+        if (response?.errors) {
+            errorMessage = Object.values(response?.errors)
+                .map(messages => messages.join('<br>'))
+                .join('<br>');
+        } else {
+            errorMessage = response.message;
+        }
+        $('#error').html(errorMessage);
+        showToast(errorMessage, 'error');
+    }
+
     function showToast(message, type = 'success') {
         const toastContainer = document.getElementById('global-toast-container');
         let icon = 'bx-check';

@@ -13,17 +13,18 @@ return new class extends Migration {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('email')->unique();
             $table->string('username')->unique()->nullable();
-            $table->foreignId('company_id')->nullable()->constrained('users')->cascadeOnDelete();
-            $table->string('company_name')->nullable();
             $table->enum('role', ['admin', 'company', 'branch-manager', 'inspector'])->default('inspector');
-            $table->integer('plan')->nullable();
-            $table->text('note')->nullable();
             $table->string('picture')->nullable();
             $table->string('telephone')->nullable();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->foreignId('company_id')->nullable()->constrained('users')->cascadeOnDelete();
+            $table->string('company_name')->nullable();
+            $table->integer('plan')->nullable();
+            $table->date('plan_date')->nullable();
+            $table->text('note')->nullable();
             $table->string('password');
+            $table->timestamp('email_verified_at')->nullable();
             $table->foreignId('created_by')->constrained('users')->cascadeOnDelete();
             $table->rememberToken();
             $table->timestamps();

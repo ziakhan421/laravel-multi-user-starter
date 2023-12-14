@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -24,7 +25,6 @@ class User extends Authenticatable
     public static $rules = [
         'name' => 'required|max:255',
         'email' => 'required|email|max:255|unique:users,email',
-        'password' => 'required|min:6',
         'company_name' => 'max:255',
         'username' => 'max:255|unique:users,username',
         'company_id' => 'exists:users,id',
@@ -51,8 +51,21 @@ class User extends Authenticatable
         'telephone',
         'email',
         'password',
+        'plan_date',
         'created_by'
     ];
+
+    // Define the new attribute
+    protected $appends = ['expireDate'];
+
+    public function getExpireDateAttribute(): string
+    {
+        $planDate = Carbon::parse($this->attributes['plan_date']);
+        // Add the number of years from the plan column to the created_at date
+        $expireDate = $planDate->addYears($this->attributes['plan']);
+        return $expireDate->format('Y-m-d');
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

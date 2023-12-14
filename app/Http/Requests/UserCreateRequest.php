@@ -16,6 +16,7 @@ class UserCreateRequest extends FormRequest
     public function rules(): array
     {
         $rules = User::$rules;
+        $rules['password'] = 'required|min:6';
         $rules['role'] = [
             Rule::requiredIf(function () {
                 return auth()->check() && auth()->user()->role !== User::ADMIN_ROLE;

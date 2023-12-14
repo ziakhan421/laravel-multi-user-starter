@@ -16,14 +16,10 @@ class UserUpdateRequest extends FormRequest
     public function rules(): array
     {
         $rules = User::$rules;
+        $rules['newPassword'] = 'min:6';
         $rules['role'] = [
             Rule::requiredIf(function () {
                 return auth()->check() && auth()->user()->role !== User::ADMIN_ROLE;
-            }),
-        ];
-        $rules['plan'] = [
-            Rule::requiredIf(function () {
-                return auth()->check() && auth()->user()->role == User::ADMIN_ROLE;
             }),
         ];
         $rules['email'] = $rules['email'] . "," . $this->route("id");

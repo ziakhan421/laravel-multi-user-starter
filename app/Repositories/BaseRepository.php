@@ -174,8 +174,9 @@ abstract class BaseRepository
      * @param array $columns
      *
      * @return Builder|Builder[]|Collection|Model|null
+     * @throws Exception
      */
-    public function find($id, $columns = ['*'])
+    public function find($id, $columns = ['*']): Model|Collection|Builder|array|null
     {
         $this->makeModel();
 
@@ -191,8 +192,9 @@ abstract class BaseRepository
      * @param int $id
      *
      * @return Builder|Builder[]|Collection|Model
+     * @throws Exception
      */
-    public function update($input, $id)
+    public function update($input, $id): Model|Collection|Builder|array
     {
         $this->makeModel();
 

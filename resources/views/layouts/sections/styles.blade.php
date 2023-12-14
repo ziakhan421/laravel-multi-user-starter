@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}"/>
 
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}"/>
+<link rel="stylesheet" href="{{ asset('assets/vendor/libs/sweat-alert/sweetalert2.min.css') }}"/>
 
 @yield('vendor-style')
 
