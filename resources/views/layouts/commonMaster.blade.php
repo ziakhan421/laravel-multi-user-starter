@@ -34,10 +34,27 @@
 @yield('layoutContent')
 <!--/ Layout Content -->
 
+@include('admin.notifications.models.create')
+
 <!-- Include Scripts -->
 @include('layouts/sections/scripts')
 
 <script>
+    $(document).ready(function() {
+        $('.select2').select2({
+            placeholder: 'Select an option'
+        });
+
+        $('#emailTo').select2({
+            theme: 'bootstrap-5',
+            placeholder: 'Select Destination',
+            minimumResultsForSearch: -1,
+            dropdownParent: $('#emailCompose'),
+        });
+    });
+    function showEmailComposeModel(){
+        $('#emailCompose').modal('show');
+    }
     window.confirmAlert = function confirmAlert(title = null, text = null, icon = null, showCancelButton = true, confirmButtonText = null) {
         return {
             title: title ?? 'Are you sure?',
@@ -48,7 +65,7 @@
         }
     }
 
-    function showError(response){
+    function showError(response) {
         let errorMessage;
         if (response?.errors) {
             errorMessage = Object.values(response?.errors)
@@ -97,10 +114,10 @@
         bsToast.show();
     }
 
-    function showProgressBar(parentElement,show = false){
-        if(!show){
+    function showProgressBar(parentElement, show = false) {
+        if (!show) {
             parentElement.unblock();
-        }else {
+        } else {
             parentElement.block({
                 message: '<div class="spinner-border spinner-border-lg text-primary" role="status"></div>',
                 css: {backgroundColor: "transparent", border: "0"},

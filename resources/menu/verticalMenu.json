@@ -95,7 +95,7 @@
         },
         {
             "name": "Logout",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-power-off",
             "slug": "logout",
             "url": "/logout",
             "visible": [

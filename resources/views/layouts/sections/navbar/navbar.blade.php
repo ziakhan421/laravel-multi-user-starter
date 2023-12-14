@@ -69,7 +69,7 @@
                             @if(auth()->user()->role ==='admin')
                                 <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
                                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
-                                       data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                       data-bs-toggle="modal" data-bs-target="#emailCompose" aria-expanded="false">
                                         <i class="bx bx-message bx-sm"></i>
                                     </a>
                                 </li>

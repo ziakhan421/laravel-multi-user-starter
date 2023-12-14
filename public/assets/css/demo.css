@@ -5,14 +5,27 @@
 .font-size-1 {
     font-size: 1rem;
 }
+.select2-results>.select2-results__options {
+    max-height: 15rem;
+    overflow-y: auto;
+}
 
-.table  th {
+.table th {
     background: rgba(105, 108, 255, 0.34);
     color: black !important;
 }
-.light-style table.dataTable tbody>tr.selected, .light-style table.dataTable tbody>tr>.selected{
+
+.email-compose .modal-dialog {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    width: 100%
+}
+
+.light-style table.dataTable tbody > tr.selected, .light-style table.dataTable tbody > tr > .selected {
     background-color: #696cff29 !important;
 }
+
 .menu .app-brand.demo {
     height: 100px;
     margin-top: 12px;

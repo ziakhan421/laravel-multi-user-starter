@@ -25,4 +25,9 @@ class Helper
     {
         return auth()->user()->role === User::INSPECTOR_ROLE;
     }
+
+    public static function getCompaniesList()
+    {
+        return User::where('role', User::COMPANY_ROLE)->get(['id', 'company_name']);
+    }
 }
