@@ -42,165 +42,11 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="newCompany" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="modelLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modelLabel">Add Company</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form id="companyForm">
-                    <div class="modal-body">
+    @include('admin.users.models.create')
 
-                        @csrf
-                        <input type="text" hidden id="recid"/>
-                        <div class="row">
-                            <div class="col-md-6 col-12 form-group mt-2">
-                                <label class="form-label" for="email">Email</label>
-                                <input class="form-control" type="email" required id="email" name="email"
-                                       placeholder="john.doe@gmail.com">
-                            </div>
-                            <div class="col-md-6 col-12 form-group mt-2">
-                                <div class="form-password-toggle">
-                                    <label id="passwordLabel" class="form-label" for="password">Password</label>
-                                    <div class="input-group input-group-merge has-validation">
-                                        <input class="form-control" type="password" id="password" required
-                                               name="password" placeholder="············" min="6"
-                                               aria-describedby="multicol-password2">
-                                        <span class="input-group-text cursor-pointer" id="multicol-password2"><i
-                                                class="bx bx-hide"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-12 form-group mt-2">
-                                <label class="form-label" for="company_name">Company Name</label>
-                                <input type="text" id="company_name" class="form-control" placeholder="John Doe company"
-                                       name="company_name" required>
-                            </div>
-                            <div id="planDiv" class="col-md-6 col-12 form-group mt-2">
-                                <label class="form-label" for="plan">Planed</label>
-                                <select class="form-select" name="plan" id="plan" required>
-                                    <option value="1">1 year</option>
-                                    <option value="2">2 Years</option>
-                                </select>
-                            </div>
-                            <div class="col-md-6 col-12 form-group mt-2">
-                                <label class="form-label" for="name">Name</label>
-                                <input type="text" id="name" class="form-control" required placeholder="John Doe"
-                                       name="name">
-                            </div>
-                            <div class="col-md-6 col-12 form-group mt-2">
-                                <label class="form-label" for="telephone">Telephone</label>
-                                <input type="tel" id="telephone" class="form-control" placeholder="304 752 4631"
-                                       name="telephone">
-                            </div>
-                            <div class="col-12 form-group mt-2">
-                                <label class="form-label" for="note">Note</label>
-                                <textarea class="form-control" id="note" name="note"
-                                          rows="3"></textarea>
-                            </div>
+    @include('admin.users.models.renew-plan')
 
-                            <div class="error" id="error"></div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="submitBtn" type="submit" class="btn btn-primary">Register</button>
-                        <button id="progressBtn" class="btn btn-primary" type="button" disabled>
-                            <span class="spinner-grow me-1" role="status" aria-hidden="true"></span>
-                            Processing...
-                        </button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="renewModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="modelLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modelLabel">Contract Renew!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <input type="text" hidden id="recIdForRenew"/>
-                    <div class="row">
-                        <div id="planDiv" class="col-12 form-group">
-                            <label class="form-label" for="plan">Select Plan (Contract Period)</label>
-                            <select class="form-select" id="renewPlan" required>
-                                <option value="1">1 year</option>
-                                <option value="2">2 Years</option>
-                                <option value="3">3 Years</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="renewBtn" type="button" onclick="confirmRenewPlan()" class="btn btn-primary">Confirm
-                    </button>
-                    <button id="progressRenewBtn" class="btn btn-primary" type="button" disabled>
-                        <span class="spinner-grow me-1" role="status" aria-hidden="true"></span>
-                        Processing...
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="viewCompany" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-         aria-labelledby="modelLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modelLabel">Company</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-unstyled p-0 m-0">
-                        <li class="d-flex flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3">Email:</div>
-                            <div id="emailValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Company Name:</div>
-                            <div id="companyNameValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Planned:</div>
-                            <div id="planValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Expired:</div>
-                            <div id="planExpiredValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Name:</div>
-                            <div id="nameValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Telephone:</div>
-                            <div id="telephoneValue" class="ms-3"></div>
-                        </li>
-                        <li class="d-flex border-top flex-md-row flex-column py-3 px-2">
-                            <div class="fw-bold col-12 col-md-3 font-medium">Note:</div>
-                            <div id="noteValue" class="ms-3"></div>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    @include('admin.users.models.view')
 @endsection
 
 @section('page-script')
@@ -209,12 +55,9 @@
         let category;
         let params = '';
         $(document).ready(function () {
-            $("#progressBtn").hide()
-            $("#progressRenewBtn").hide()
             $("#companyForm").on("submit", function (e) {
                 e.preventDefault();
                 $('#error').html('');
-
                 let form = $(this)[0];
                 let formData = new FormData(form);
                 let url = "{{route('admin.users.store')}}";
@@ -226,9 +69,7 @@
                         formData.append('newPassword', $('#password').val());
                     }
                 }
-                $("#progressBtn").show()
-                $("#submitBtn").hide()
-
+                showProgressBar($("#companyForm"),true);
                 $.ajax({
                     type: "POST",
                     url: url,
@@ -242,10 +83,10 @@
                     },
                     error: function (jqXHR) {
                         showError(jqXHR.responseJSON);
+                        showProgressBar($("#companyForm"),false);
                     },
                     complete: function () {
-                        $("#progressBtn").hide()
-                        $("#submitBtn").show()
+                        showProgressBar($("#companyForm"),false);
                     }
                 });
             });
@@ -332,6 +173,7 @@
             let url = '{{route("admin.users.update-plan",[":id",":plan"])}}';
             url = url.replace(':id', recId);
             url = url.replace(':plan', planId);
+            showProgressBar($("#renewBody"),true);
 
             $.ajax({
                 type: "GET",
@@ -349,6 +191,10 @@
                 },
                 error: function (result) {
                     showError(result.responseJSON);
+                    showProgressBar($("#renewBody"),false);
+                },
+                complete: function () {
+                    showProgressBar($("#renewBody"),false);
                 }
             });
         }
@@ -359,6 +205,7 @@
             $('#error').html(null);
             $('#passwordLabel').text('Password');
             $('#planDiv').show();
+            $('#submitBtn').text('Register');
         });
 
         function showEditViewModel(id) {

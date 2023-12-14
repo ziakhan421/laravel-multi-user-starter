@@ -96,6 +96,18 @@
         const bsToast = new bootstrap.Toast(toast);
         bsToast.show();
     }
+
+    function showProgressBar(parentElement,show = false){
+        if(!show){
+            parentElement.unblock();
+        }else {
+            parentElement.block({
+                message: '<div class="spinner-border spinner-border-lg text-primary" role="status"></div>',
+                css: {backgroundColor: "transparent", border: "0"},
+                overlayCSS: {backgroundColor: "#fff", opacity: .7}
+            });
+        }
+    }
 </script>
 </body>
 

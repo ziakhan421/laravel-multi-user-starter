@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}"/>
 <link rel="stylesheet" href="{{ asset('assets/vendor/libs/sweat-alert/sweetalert2.min.css') }}"/>
+<link rel="stylesheet" href="{{ asset('assets/vendor/libs/spinkit/spinkit.css') }}"/>
 
 @yield('vendor-style')
 
