@@ -28,33 +28,66 @@
 
 <body>
 
-<div id="global-toast-container" class="p-3"></div>
+<div id="global-toast-container" class="px-3"></div>
 
 <!-- Layout Content -->
 @yield('layoutContent')
 <!--/ Layout Content -->
 
-@include('admin.notifications.models.create')
+@if(auth()->check() && auth()->user()->role == \App\Models\User::ADMIN_ROLE)
+    @include('admin.notifications.models.create')
+@endif
 
 <!-- Include Scripts -->
 @include('layouts/sections/scripts')
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.select2').select2({
             placeholder: 'Select an option'
         });
 
+        @if(auth()->check() && auth()->user()->role == \App\Models\User::ADMIN_ROLE)
         $('#emailTo').select2({
             theme: 'bootstrap-5',
             placeholder: 'Select Destination',
             minimumResultsForSearch: -1,
             dropdownParent: $('#emailCompose'),
         });
+
+        $("#email-compose-form").on("submit", function (e) {
+            e.preventDefault();
+            let form = $(this)[0];
+            let formData = new FormData(form);
+            let url = "{{route('admin.notifications.store')}}";
+            showProgressBar($("#email-compose-form"), true);
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+                    showToast(data.message);
+                    showProgressBar($("#email-compose-form"), false);
+                    $('#emailCompose').modal('hide');
+                    $(".select2").val('').trigger("change");
+                    $("#email-compose-form").trigger('reset');
+                },
+                error: function (jqXHR) {
+                    showProgressBar($("#email-compose-form"), false);
+                    showError(jqXHR.responseJSON);
+                }
+            });
+        });
+
+        @endif
     });
-    function showEmailComposeModel(){
+
+    function showEmailComposeModel() {
         $('#emailCompose').modal('show');
     }
+
     window.confirmAlert = function confirmAlert(title = null, text = null, icon = null, showCancelButton = true, confirmButtonText = null) {
         return {
             title: title ?? 'Are you sure?',

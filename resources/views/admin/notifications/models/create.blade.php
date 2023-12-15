@@ -9,12 +9,13 @@
             </div>
             <div class="modal-body flex-grow-1 pb-sm-0 p-2">
                 <form id="email-compose-form">
+                    @csrf
                     <div class="px-1 py-1 d-flex justify-content-between align-items-center">
                         @php
                             $companies = \App\Helper::getCompaniesList();
                         @endphp
                         <select class="select2 text-black form-select border-0 shadow-none select2-hidden-accessible flex-grow-1"
-                                id="emailTo" name="emailContacts">
+                                id="emailTo" name="email-to">
                             <option value="" disabled selected>Select Destination</option>
                             @foreach($companies as $company)
                                 <option value="{{$company->id}}">{{$company->company_name??"--"}}</option>
@@ -24,7 +25,7 @@
                     <hr class="my-0">
                     <div class="d-flex align-items-center my-1">
                         <label for="email-subject"></label>
-                        <input type="text" placeholder="Subject"
+                        <input type="text" placeholder="Subject" name="email-subject"
                                class="form-control border-0 shadow-none"
                                id="email-subject">
                     </div>

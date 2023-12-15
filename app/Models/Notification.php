@@ -9,16 +9,6 @@ class Notification extends Model
 {
     use HasFactory;
 
-    /**
-     * Validation rules
-     *
-     * @var array
-     */
-    public static $rules = [
-        'company_id' => 'exists:users,id',
-        'message' => 'required|max:255',
-        'subject' => 'required'
-    ];
 
     /**
      * Fillable

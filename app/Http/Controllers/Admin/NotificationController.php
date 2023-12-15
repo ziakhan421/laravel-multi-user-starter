@@ -33,6 +33,10 @@ class NotificationController extends Controller
     {
         $input = $request->all();
         $input['created_by'] = auth()->id();
+        $input['company_id'] = $input['email-to'];
+        $input['subject'] = $input['email-subject'];
+        $input['message'] = $input['email-message'];
+        
         $data = $this->notificationRepository->create($input);
 
         if (isset($data->id)) {
