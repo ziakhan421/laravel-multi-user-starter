@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -27,4 +30,39 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    /**
+     * Render an exception into an HTTP response.
+     *
+     * @param Request $request
+     * @param Exception|Throwable $exception
+     * @return Response
+     * @throws Throwable
+     */
+    public function render($request, Exception|Throwable $exception)
+    {
+        if ($this->isHttpException($exception)) {
+            if ($exception->getStatusCode() == 401) {
+                return response()->view('errors.' . '401', [], 401);
+            }
+
+            if ($exception->getStatusCode() == 403) {
+                return response()->view('errors.' . '403', [], 403);
+            }
+
+            if ($exception->getStatusCode() == 404) {
+                return response()->view('errors.' . '404', [], 404);
+            }
+
+            if ($exception->getStatusCode() == 500) {
+                return response()->view('errors.' . '500', [], 500);
+            }
+
+            if ($exception->getStatusCode() == 503) {
+                return response()->view('errors.' . '503', [], 503);
+            }
+        }
+        return parent::render($request, $exception);
+    }
+
 }

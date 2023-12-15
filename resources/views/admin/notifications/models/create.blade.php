@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="email-compose modal" id="emailCompose" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+<div class="email-compose modal animate__animated animate__bounceInUp" id="emailCompose" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
      aria-modal="true" role="dialog">
     <div class="modal-dialog m-0 me-md-4 mb-4">
         <div class="modal-content p-0">

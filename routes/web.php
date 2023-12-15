@@ -23,6 +23,9 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     Route::group(["prefix" => "notifications", "as" => "notifications."], function () {
         Route::post('/', [NotificationController::class, 'store'])->name('store');
     });
+    Route::get('/', function () {
+        return redirect('admin/console');
+    });
 });
 
 // Company Route
@@ -32,5 +35,10 @@ Route::middleware(['auth', 'company'])->group(function () {
 
 // User Route
 Route::middleware(['auth', 'isAdmin'])->group(function () {
-    Route::get('/', [AgentController::class, 'AgentDashboard'])->name('company.dashboard');
+    Route::any('/dashboard', function () {
+        return redirect('admin.dashboard');
+    });
+});
+Route::get('/', function () {
+    return redirect('/dashboard');
 });

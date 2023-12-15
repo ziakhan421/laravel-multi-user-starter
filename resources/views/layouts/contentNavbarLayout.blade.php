@@ -49,12 +49,6 @@
 
                                     @yield('content')
 
-                                    <!-- pricingModal -->
-                                    @if ($pricingModal)
-                                        @include('_partials/_modals/modal-pricing')
-                                    @endif
-                                    <!--/ pricingModal -->
-
                                 </div>
                                 <!-- / Content -->
 
@@ -75,7 +69,8 @@
                 <div class="layout-overlay layout-menu-toggle"></div>
             @endif
             <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-            <div class="drag-target"></div>
+            <div class="drag-target"
+                 style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></div>
         </div>
         <!-- / Layout wrapper -->
 @endsection

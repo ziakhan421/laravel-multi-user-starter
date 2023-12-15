@@ -84,11 +84,16 @@
         @endif
     });
 
+    @if(auth()->check() && auth()->user()->role == \App\Models\User::ADMIN_ROLE)
+
     function showEmailComposeModel() {
         $('#emailCompose').modal('show');
     }
 
-    window.confirmAlert = function confirmAlert(title = null, text = null, icon = null, showCancelButton = true, confirmButtonText = null) {
+    @endif
+
+
+        window.confirmAlert = function confirmAlert(title = null, text = null, icon = null, showCancelButton = true, confirmButtonText = null) {
         return {
             title: title ?? 'Are you sure?',
             text: text ?? "You won't be able to revert this!",

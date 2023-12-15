@@ -5,9 +5,23 @@
 .font-size-1 {
     font-size: 1rem;
 }
-.select2-results>.select2-results__options {
+
+.select2-results > .select2-results__options {
     max-height: 15rem;
     overflow-y: auto;
+}
+
+.misc-wrapper {
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 3.25rem);
+    text-align: center
 }
 
 .table th {
