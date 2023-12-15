@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\NotificationController;
 use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\Company\AgentController;
+use App\Http\Controllers\Company\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 require __DIR__ . '/auth.php';
@@ -28,17 +28,12 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin', 'as' => 'a
     });
 });
 
-// Company Route
-Route::middleware(['auth', 'company'])->group(function () {
-    Route::get('/', [AgentController::class, 'AgentDashboard'])->name('company.dashboard');
-});
-
-// User Route
+// Company Routes
 Route::middleware(['auth', 'isAdmin'])->group(function () {
-    Route::any('/dashboard', function () {
-        return redirect('admin.dashboard');
+    Route::get('/', [DashboardController::class, 'index'])->name('company.dashboard');
+
+    Route::group(['middleware' => ['company'],"prefix" => "notifications", "as" => "notifications."], function () {
+        Route::get('/', [NotificationController::class, 'index'])->name('index');
+        Route::delete('/{ids}', [NotificationController::class, 'destroy'])->name('destroy');
     });
-});
-Route::get('/', function () {
-    return redirect('/dashboard');
 });

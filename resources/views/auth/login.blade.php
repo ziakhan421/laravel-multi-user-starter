@@ -36,12 +36,20 @@
                         <div class="divider">
                             <div class="divider-text">LOGIN WITH EMAIL</div>
                         </div>
+
+                        @if ($status = session('status'))
+                            <div class="fs-tiny fw-bold text-primary">
+                                {{ $status }}
+                            </div>
+                        @endif
+
                         <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="text" class="form-control" id="email" name="email" required
                                        placeholder="Enter your email or username" autofocus>
+
                             </div>
                             <div class="mb-3 form-password-toggle">
                                 <div class="d-flex justify-content-between">
@@ -56,8 +64,15 @@
                                            aria-describedby="password"/>
                                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                                 </div>
+                                @if ($messages = $errors->get('email'))
+                                    <ul class="invalid-feedback d-block list-unstyled py-1">
+                                        @foreach ((array) $messages as $message)
+                                            <li>{{ $message }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
-                            <div class="mb-3 mt-5">
+                            <div class="mt-4">
                                 <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                             </div>
                         </form>

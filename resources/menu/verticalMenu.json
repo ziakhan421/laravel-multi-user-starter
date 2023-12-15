@@ -9,7 +9,7 @@
         {
             "url": "admin/console",
             "name": "Company Register",
-            "icon": "menu-icon tf-icons bx bx-home-circle",
+            "icon": "menu-icon tf-icons bx bx-sm bx-home-circle",
             "slug": "admin.dashboard",
             "visible": [
                 "admin"
@@ -18,15 +18,15 @@
         {
             "url": "/",
             "name": "Top",
-            "icon": "menu-icon tf-icons bx bx-home-circle",
-            "slug": "",
+            "icon": "menu-icon tf-icons bx bx-sm bx-bar-chart-alt-2",
+            "slug": "company.dashboard",
             "visible": [
                 "company","branch-manager"
             ]
         },
         {
             "name": "Analysis",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm  bxs-flask",
             "slug": "analysis",
             "url": "/analysis",
             "visible": [
@@ -35,7 +35,7 @@
         },
         {
             "name": "Defects",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bx-bug",
             "slug": "defects",
             "url": "/defects",
             "visible": [
@@ -44,7 +44,7 @@
         },
         {
             "name": "Account management",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bxs-user-account",
             "slug": "account-management",
             "url": "/account-management",
             "visible": [
@@ -53,7 +53,7 @@
         },
         {
             "name": "Branch management",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bx-git-branch",
             "slug": "branch-management",
             "url": "/branch-management",
             "visible": [
@@ -62,7 +62,7 @@
         },
         {
             "name": "Machine management",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bx-calculator",
             "slug": "machine-management",
             "url": "/machine-management",
             "visible": [
@@ -71,7 +71,7 @@
         },
         {
             "name": "Inspection management",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bx-notepad",
             "slug": "inspection-management",
             "url": "/inspection-management",
             "visible": [
@@ -80,7 +80,7 @@
         },
         {
             "name": "Inspection history",
-            "icon": "menu-icon tf-icons bx bx-collection",
+            "icon": "menu-icon tf-icons bx bx-sm bx-history",
             "slug": "inspection-history",
             "url": "/inspection-history",
             "visible": [
@@ -95,7 +95,7 @@
         },
         {
             "name": "Logout",
-            "icon": "menu-icon tf-icons bx bx-power-off",
+            "icon": "menu-icon tf-icons bx bx-sm bx-power-off",
             "slug": "logout",
             "url": "/logout",
             "visible": [
